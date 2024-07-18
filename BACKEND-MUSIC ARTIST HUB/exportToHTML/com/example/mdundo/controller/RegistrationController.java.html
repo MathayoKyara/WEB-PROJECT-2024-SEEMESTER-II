@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>RegistrationController.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+RegistrationController.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">mdundo</span><span class="s2">.</span><span class="s1">controller</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">mdundo</span><span class="s2">.</span><span class="s1">model</span><span class="s2">.</span><span class="s1">Registration</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">mdundo</span><span class="s2">.</span><span class="s1">service</span><span class="s2">.</span><span class="s1">RegistrationService</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">springframework</span><span class="s2">.</span><span class="s1">beans</span><span class="s2">.</span><span class="s1">factory</span><span class="s2">.</span><span class="s1">annotation</span><span class="s2">.</span><span class="s1">Autowired</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">springframework</span><span class="s2">.</span><span class="s1">web</span><span class="s2">.</span><span class="s1">bind</span><span class="s2">.</span><span class="s1">annotation</span><span class="s2">.*;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">List</span><span class="s2">;</span>
+
+<span class="s1">@RestController</span>
+<span class="s1">@RequestMapping</span><span class="s2">(</span><span class="s3">&quot;/api/v1/registration&quot;</span><span class="s2">)</span>
+<span class="s1">@CrossOrigin</span>
+<span class="s0">public class </span><span class="s1">RegistrationController </span><span class="s2">{</span>
+
+    <span class="s1">@Autowired</span>
+    <span class="s0">private </span><span class="s1">RegistrationService registrationService</span><span class="s2">;</span>
+    <span class="s1">@PostMapping</span><span class="s2">(</span><span class="s3">&quot;/add&quot;</span><span class="s2">)</span>
+    <span class="s0">public </span><span class="s1">String postData</span><span class="s2">(</span><span class="s1">@RequestBody Registration registration</span><span class="s2">){</span>
+        <span class="s1">registrationService</span><span class="s2">.</span><span class="s1">postData</span><span class="s2">(</span><span class="s1">registration</span><span class="s2">);</span>
+        <span class="s0">return </span><span class="s3">&quot;registered successfully&quot;</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s1">@GetMapping</span><span class="s2">(</span><span class="s3">&quot;/getAll&quot;</span><span class="s2">)</span>
+    <span class="s0">public </span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">Registration</span><span class="s2">&gt; </span><span class="s1">getAllRegistration</span><span class="s2">(){ </span><span class="s0">return </span><span class="s1">registrationService</span><span class="s2">.</span><span class="s1">getAllRegistration</span><span class="s2">(); }</span>
+    <span class="s1">@PutMapping</span><span class="s2">(</span><span class="s3">&quot;/update/{id}&quot;</span><span class="s2">)</span>
+    <span class="s0">public </span><span class="s1">Registration updadteRegistration</span><span class="s2">(</span><span class="s1">@PathVariable Integer id</span><span class="s2">,</span><span class="s1">@RequestBody Registration registration</span><span class="s2">){</span>
+        <span class="s1">registration</span><span class="s2">.</span><span class="s1">setId</span><span class="s2">(</span><span class="s1">id</span><span class="s2">);</span>
+        <span class="s0">return </span><span class="s1">registrationService</span><span class="s2">.</span><span class="s1">updateRegistration</span><span class="s2">(</span><span class="s1">registration</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s1">@DeleteMapping</span><span class="s2">(</span><span class="s3">&quot;/delete{id}&quot;</span><span class="s2">)</span>
+    <span class="s0">public void </span><span class="s1">deleteRegistration</span><span class="s2">(</span><span class="s1">@RequestParam Integer id</span><span class="s2">){</span>
+        <span class="s1">registrationService</span><span class="s2">.</span><span class="s1">deleteRegistration</span><span class="s2">(</span><span class="s1">id</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+
+
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

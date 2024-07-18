@@ -1,0 +1,106 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('src/assets/pictures/dzuch.png'), url('src/assets/pictures/MOND.png'), url('src/assets/pictures/kiba.png');
+  background-size: 600px 400px, 400px 500px, 400px 500px;
+  background-position: center, center right, center left;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  font-family: Arial, sans-serif;
+  block-size: 100vh;
+
+}
+
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100%;
+}
+
+section {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-inline-size: 400px;
+  inline-size: 100%;
+  text-align: center;
+}
+
+
+form {
+  margin-block-end: 20px;
+}
+
+form label {
+  display: block;
+  margin-block-end: 8px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+  inline-size: calc(100% - 20px);
+  padding: 10px;
+  margin-block-end: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button[type="submit"],
+button[type="button"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #0056b3;
+
+}
+
+.register-button,
+.reset-password-button {
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-block-end: 10px;
+}
+
+.register-button:hover,
+.reset-password-button:hover {
+  background-color: #0056b3;
+}
+
+.register-button:focus,
+.reset-password-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #007bff;
+}

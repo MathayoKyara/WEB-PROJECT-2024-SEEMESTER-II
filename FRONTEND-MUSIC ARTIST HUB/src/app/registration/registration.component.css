@@ -1,0 +1,78 @@
+.registration-form {
+  max-inline-size: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url('src/assets/pictures/dzuch.png');
+
+  background-size: cover;
+
+  background-position: left;
+
+  border: 10px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form h2 {
+  font-size: 30px;
+  margin-block-end: 50px;
+  text-align: start;
+  color: gold;
+
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form label {
+  font-weight: bold;
+  margin-block-end: 8px;
+
+}
+
+.registration-form input {
+  padding: 10px;
+  margin-block-end: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+  color: brown;
+}
+
+.registration-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration-form button:hover {
+  background-color: #0056b3;
+}
+
+.registration-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.registration-form p {
+  margin-block-start: 15px;
+  text-align: center;
+  color: #fff;
+
+}
+
+.registration-form p a {
+  color: greenyellow;
+  text-decoration: none;
+}
+
+.registration-form p a:hover {
+  text-decoration: underline;
+}

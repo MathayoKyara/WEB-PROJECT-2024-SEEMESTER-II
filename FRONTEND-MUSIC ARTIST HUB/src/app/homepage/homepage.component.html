@@ -1,0 +1,52 @@
+<body>
+  <header>
+    <label for="profile-picture-input" class="rounded-label">
+      <img id="profile-picture" src="profile-picture-placeholder.jpg" alt="Profile Picture">
+      <br>
+      <span>Change Profile Picture</span>
+      <input type="file" id="profile-picture-input" accept="image/*" (change)="previewProfilePicture($event)">
+    </label>
+    <h1>MUSIC ARTIST HOME PAGE</h1>
+  </header>
+
+  <main>
+    <section id="bio">
+      <h2>BIO</h2>
+      <h3>(enter your personal details here)</h3>
+      <textarea id="bio-text" rows="4" cols="50" placeholder="Enter your bio here..." (change)="saveBio()"></textarea>
+      <button (click)="viewBio()">save</button>
+    </section>
+
+    <section id="tracks">
+      <h2>AUDIO TRACK LISTS</h2>
+      <h3>(upload your audio track here)</h3>
+      <div>
+        <input type="file" id="audioInput" accept="audio/*" (change)="attachAudio()">
+        <audio id="audioPlayer" controls></audio>
+        <button (click)="saveAudio()">Save</button>
+
+        <h2>VIDEO TRACK LISTS</h2>
+        <h3>(upload your video track here)</h3>
+        <input type="file" id="videoInput" accept="video/*" (change)="attachVideo()">
+        <video id="videoPlayer" width="320" height="240" controls></video>
+        <button (click)="saveVideo()">Save</button>
+      </div>
+    </section>
+
+    <section id="plans">
+      <h2>ARTIST PLANS</h2>
+      <input type="file" id="plan-upload" accept=".doc,.docx,.pdf" (change)="viewUploadedFile($event, 'plan')">
+      <div id="plan-viewer"></div>
+      <button (click)="savePlans()">Save</button>
+    </section>
+
+    <section id="studio">
+      <h2>STUDIO DETAILS</h2>
+      <input type="file" id="studio-upload" accept=".doc,.docx,.pdf" (change)="viewUploadedFile($event, 'studio')">
+      <div id="studio-viewer"></div>
+      <button (click)="saveStudio()">Save</button>
+    </section>
+
+    <button (click)="submitHomepageData()">Submit Homepage Data</button>
+  </main>
+</body>

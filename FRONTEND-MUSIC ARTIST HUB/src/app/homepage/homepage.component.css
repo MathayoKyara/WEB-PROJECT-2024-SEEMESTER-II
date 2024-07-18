@@ -1,0 +1,165 @@
+body {
+  background-image: url('src/assets/pictures/mic.png');
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: greenyellow;
+  color: #333;
+
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+header label {
+  cursor: pointer;
+  display: inline-block;
+  margin-block-end: 10px;
+}
+
+header img {
+  border-radius: 50%;
+  inline-size: 100px;
+  block-size: 100px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.1);
+}
+
+header span {
+  display: block;
+  margin-block-start: 10px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#profile-picture-input {
+  display: none;
+
+
+}
+
+.rounded-label {
+  display: inline-block;
+  inline-size: 150px;
+  block-size: 150px;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  text-decoration-color: blue;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 20px solid #ccc;
+}
+
+main {
+  padding: 20px;
+  max-inline-size: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-block-end: 40px;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-block-start: 0;
+  font-size: 1.5em;
+  border-block-end: 2px solid #333;
+  padding-block-end: 5px;
+}
+
+section h3 {
+  color: #777;
+  font-weight: normal;
+  margin-block-start: 10px;
+}
+
+textarea,
+input[type="file"],
+button {
+  display: block;
+  inline-size: 100%;
+  margin-block-start: 10px;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+audio,
+video {
+  margin-block-start: 20px;
+  inline-size: 100%;
+  max-inline-size: 600px;
+}
+
+#bio textarea {
+  block-size: 100px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  header img {
+    inline-size: 80px;
+    block-size: 80px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  button,
+  textarea,
+  input[type="file"] {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+}
